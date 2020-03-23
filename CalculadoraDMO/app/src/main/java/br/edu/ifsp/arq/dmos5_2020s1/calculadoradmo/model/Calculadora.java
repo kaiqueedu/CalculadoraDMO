@@ -43,6 +43,11 @@ public class Calculadora {
                     memoria /= valor;
                     break;
 
+                case Constantes.POTENCIACAO:
+                    Double pow =  Math.pow( Double.parseDouble(String.valueOf(memoria) ), Double.parseDouble(String.valueOf(valor) ) );
+                    memoria = Float.parseFloat(String.valueOf(pow));
+                    break;
+
                 default:
                     break;
             }

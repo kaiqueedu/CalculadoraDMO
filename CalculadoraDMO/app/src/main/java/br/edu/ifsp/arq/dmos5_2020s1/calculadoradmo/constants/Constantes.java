@@ -7,5 +7,6 @@ public class Constantes {
     public static final int MULTIPLICACAO = 3;
     public static final int DIVISAO = 4;
     public static final int NULO = 0;
+    public static final int POTENCIACAO = 5;
 
 }

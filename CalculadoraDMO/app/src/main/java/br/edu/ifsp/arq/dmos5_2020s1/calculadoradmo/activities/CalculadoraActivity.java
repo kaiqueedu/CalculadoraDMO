@@ -36,6 +36,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
     private Button buttonSubtracao;
     private Button buttonPonto;
     private Button buttonIgual;
+    private Button buttonPotencia;
+    private Button button_ce;
 
     private Calculadora c;
 
@@ -85,6 +87,15 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
                 tela.setText( "" );
                 break;
 
+            case R.id.button_ce:
+                tela.setText( "" );
+                break;
+
+            case R.id.button_potencia:
+                c.calcular(Constantes.POTENCIACAO, Float.parseFloat( tela.getText().toString() ) );
+                tela.setText( "" );
+                break;
+
             case R.id.button_igual:
                  Float result = c.calcular( Constantes.RESULTADO, Float.parseFloat( tela.getText().toString() ) );
                  tela.setText( result.toString() );
@@ -123,6 +134,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
         buttonSubtracao     = findViewById( R.id.button_subtracao );
         buttonPonto         = findViewById( R.id.button_ponto );
         buttonIgual         = findViewById( R.id.button_igual );
+        button_ce           = findViewById( R.id.button_ce );
+        buttonPotencia      = findViewById( R.id.button_potencia );
 
         botaoUm.setOnClickListener(this);
         botaoDois.setOnClickListener(this);
@@ -142,6 +155,8 @@ public class CalculadoraActivity extends AppCompatActivity implements View.OnCli
         buttonSubtracao.setOnClickListener(this);
         buttonPonto.setOnClickListener(this);
         buttonIgual.setOnClickListener(this);
+        buttonPotencia.setOnClickListener(this);
+        button_ce.setOnClickListener(this);
 
    }
 
